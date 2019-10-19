@@ -13,14 +13,17 @@
   var qLength = prompt("How long would you like your password? Enter value between 8-128.");
     if (qLength < 8 || qLength > 128) {
       return process();
-    };
+    }
+    if (qLength === false) {
+      return process();
+    }
   var qBigger = confirm("Would you like UPPERCASE letters?");
   var qLower = confirm("Would you like lowercase letters?");
   var qNumbers = confirm("Would you like numbers?");
   var qChar = confirm("Would you like special characters?");
 
 //Arrays for password randomization
-  var specChar = ["[", "]", "^", "$", "|", "?", "*", "+", "(", ")"];
+  var specChar = ["[", "]", "\\", "/", "^", "$", "|", "?", "*", "+", "(", ")"];
   var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
   var smallLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   var bigLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
